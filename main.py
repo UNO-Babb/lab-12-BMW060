@@ -33,7 +33,7 @@ def main():
   print("Begin Sorting %d elements." % numberTerms)
 
   startTime = time.time()
-  AllSorts.bubbleSort(orderedList)
+  AllSorts.mergeSort(orderedList)
   endTime = time.time()
   elapsedTime = endTime - startTime
   print("Ordered list time: %.5f seconds" % elapsedTime)

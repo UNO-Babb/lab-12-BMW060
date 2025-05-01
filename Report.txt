@@ -1,44 +1,62 @@
-Name:
+Name: Brennan Wood
 
-Number of elements:
+Number of elements: 10000
+
+**Time in seconds**
 
 Bubble Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 2.5
+Reversed: 5.7
+Random: 4.6
 
 Bubble Sort Early Exit
-Sorted:
-Reversed:
-Random:
+Sorted: 0.00051
+Reversed: 6.0
+Random: 4.7
 
 Selection Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 1.9
+Reversed: 5.9
+Random: 4.5
 
 Insertion Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 0.00091
+Reversed: 6.0
+Random: 4.5
 
 Merge Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 0.019
+Reversed: 5.7
+Random: 4.6
 
 Questions to answer:
 1) What was the worst case scenario for any sorting technique?
 
+    Most scenarios were close to the same numbers (becuase of how small the times were)
+    The worst case scenario was definitely the reversed list, for any of the techniques
+    From the data, we can see that it was wost for Bubble Sort (with and without early exit)
+    and for Insertion Sort
 
 2) The first 3 sorts have the same runtime of O(n^2). Why were the times different? Why would one be more efficient than the others?
-
+    
+    The bubble sort with the early exit technically has the same runtime as the others, but becuase it has the early exit,
+    it has the opportunity to take that shortcut. Becuase of this, the MAX runtime is the same as the regula bubble sort,
+    but it has the ability to take a much much shorter time
 
 3) Why was merge sort so much more efficient?
 
+    From the data I have it doesn't appead to be much faster at all except for the reverse case scenario.
+    The reason it's faster in the reverse scenario is because it checks each set that it has been split into 
+    and then it can just swap their order instead of individually trying to go through the items.
 
 4) The built-in sorting technique for most programming languages is known as TimSort.
 This is a merge sort until the arrays have fewer than 10 elements, then it does an insertion sort. Why would this be useful?
 
+    This could be useful for systems where your memory or processing power is limited, becuase you don't need to go through 
+    all of the effor to split each list of 10 into lists of 1. The time that you save by not splitting up these lists
+    outweighs the time you lose by srting lists of 10 instead of lists of 1
 
 5) What issues can you see with a recursive sorting technique like merge sort?
+
+    As mentioned earlier, it could take up more storage space than the other sorting functions becuase it has to keep track
+    of a lot more lists than the other functions do.
